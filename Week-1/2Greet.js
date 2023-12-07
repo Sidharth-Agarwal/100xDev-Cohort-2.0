@@ -1,3 +1,5 @@
+// WAP to greet the person
+
 let firstName = "Sidharth";
 let lastName = "Agarwal";
 

@@ -1,3 +1,5 @@
+// WAP to greet the person based on gender
+
 let gender = true;
 
 if (gender === true) {
