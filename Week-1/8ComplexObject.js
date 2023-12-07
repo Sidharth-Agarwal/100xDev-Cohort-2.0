@@ -1,13 +1,10 @@
-const allUsers = [
-    {
+const allUsers = [{
         firstName: "Sidharth",
         gender: "Male"
-    },
-    {
+    },{
         firstName: "Raman",
         gender: "Male"
-    },
-    {
+    },{
         firstName: "Priya",
         gender: "Female"
     }
