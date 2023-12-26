@@ -8,7 +8,7 @@ const fs = require('fs');
 
 const app = express();
 app.use(bodyParser.json());
-const PORT = 5001;
+const PORT = 3000;
 
 // 1.GET /todos - Retrieve all todo items
 //   Description: Returns a list of all todo items.
