@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require("body-parser")
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
 // app.use(express.json()); -> Similar
@@ -20,6 +20,7 @@ app.post('/conversation', function (req, res) {
 })
 
 app.post('/conversation-limit', function (req, res) {
+  // const message = req.query.message; -> query parameter in search
   const message = req.body.message;
   console.log(message);
   res.json({
