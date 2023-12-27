@@ -10,9 +10,8 @@ const port = 3000
 app.get('/', function (req, res) {
     const a = req.query.a;
     const b = req.query.b;
-
     const ans = calculateSum(a, b);
-    res.send(ans);
+    res.send(toString(ans));
 })
 
 app.listen(port, function () {
