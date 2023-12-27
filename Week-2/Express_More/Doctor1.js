@@ -1,11 +1,10 @@
 const express = require('express')
+const app = express()
+const port = 3000
 
 function calculateSum(a, b) {
     return a + b;
 }
-
-const app = express()
-const port = 3000
 
 app.get('/', function (req, res) {
     const a = req.query.a;
