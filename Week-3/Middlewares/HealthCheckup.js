@@ -2,6 +2,7 @@ const express = require("express")
 const app = express();
 const port = 3000;
 
+// This is the ugly to write the code
 function userValidator(username, password) {
     if (username != "sidharth" || password != "abcde") {
         return false;
