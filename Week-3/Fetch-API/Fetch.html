@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <button onclick="getAnimalData()">Get animal data</button>
+    <script>
+        // First way to write a fetch call
+        // function getAnimalData(){
+        //     // The request for this fetch call is get by default
+        //     // If you want to give a post request we have specify
+
+        //     // The fetch function return a promise 
+        //     // const response = fetch("https://fakerapi.it/api/v1/persons")
+        //     // console.log(response)
+
+        //     fetch("https://fakerapi.it/api/v1/persons")
+        //         .then(function(response){
+        //             response.json()
+        //                 .then(function(finalData){
+        //                     console.log(finalData)
+        //                 })
+        //         })
+        // }
+
+        // Second Way to write a fetch api call
+        async function getAnimalData()
+        {
+            const response = await fetch("https://fakerapi.it/api/v1/persons");
+            const finalData = await response.json()
+            console.log(finalData);
+        }
+    </script>
+</body>
+</html>
