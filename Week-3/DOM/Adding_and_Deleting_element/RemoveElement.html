@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Document Object</h1>
+    <p>The removeElement() method</p>
+
+    <p id="demo">Click "Remove", the paragraph will be removed from the DOM</p>
+    <button onclick="myFunction()">Remove</button>
+
+    <script>
+        // Remove element
+        function myFunction(){
+            const element = document.getElementById("demo");
+            element.remove();
+        }
+    </script>
+</body>
+</html>
