@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onMouse attribute</h2>
+
+    <div onmouseup="mDown(this)" onmousedown="mUp(this)" style="background-color: #D94A38; width: 120px; height: 20px; padding: 40px;">
+        Click me
+    </div>
+
+    <script>
+        function mUp(obj){
+            obj.style.backgroundColor = "#1EC5E5"
+            obj.innerHTML = "Release me"
+        }
+
+        function mDown(obj){
+            obj.style.backgroundColor = "#D94A38"
+            obj.innerHTML = "Thank you"
+        }
+    </script>
+</body>
+</html>
