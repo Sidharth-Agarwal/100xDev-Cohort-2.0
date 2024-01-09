@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Tutorials</h1>
+    <title id="demo">DOM Tutorial</title>
+    <script>
+        const myTitle1 = document.getElementById("demo").innerHTML;
+        const myTitle2 = document.getElementById("demo").firstChild.nodeValue;
+        const myTitle3 = document.getElementById("demo").childNodes[0].nodeValue;
+        console.log(myTitle1);
+        console.log(myTitle2);
+        console.log(myTitle3);
+    </script>
+</body>
+</html>
