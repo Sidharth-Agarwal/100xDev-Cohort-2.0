@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sum</title>
+</head>
+<body>
+    <input oninput="debouncePopulateDiv()" id="firstNumber" type="text" placeholder="First Number"></input>
+    <br>
+    <br>
+    <input oninput="debouncePopulateDiv()" id="secondNumber" type="text" placeholder="Second Number"></input>
+    <br>
+    <br>
+    <button onclick="debouncePopulateDiv()">Calculate Sum</button>
+    <br>
+    <br>
+    <div id="finalSum"></div>
+
+    <script>
+        let timeOut;
+        function debouncePopulateDiv(){
+            // Delay the call to populateDiv until I've not been called for 100ms
+            // And I've been called atleast once
+            clearTimeout(timeOut);
+            timeOut = setTimeout(function() {
+                populateDiv();
+            },100)
+            // The work is only half way done
+            // We have to also cancel the clock in case something is typed
+            // How do we cancel the clock?
+            // using - clearTimeout
+            // clearTimeout(timeOut);
+        }
+
+        function populateDiv(){
+            const a = document.getElementById("firstNumber").value;
+            const b = document.getElementById("secondNumber").value;
+
+            // Fetch
+            fetch("http://localhost:3000/sum?a=" + a + "&b=" + b)
+                .then(function(response){
+                    response.text()
+                        .then(function(ans){
+                            console.log(ans);
+                            document.getElementById("finalSum").innerHTML = ans;
+                        })                        
+                })
+        }
+    </script>
+</body>
+</html>
