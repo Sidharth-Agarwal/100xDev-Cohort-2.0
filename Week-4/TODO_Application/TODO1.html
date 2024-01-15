@@ -1,3 +1,5 @@
+<!-- The Ugly Way -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,14 +10,11 @@
 <body>
     <div>
         <input id="title" type="text" placeholder="Title">
-        <br>
-        <br>
+        <br><br>
         <input id="description" type="text" placeholder="Description">
-        <br>
-        <br>
+        <br><br>
         <button onclick="addTodo()">Add TODO</button>
-        <br>
-        <br>
+        <br><br>
         <div id="container">
             <!-- <div>
                 <div>Title of TODO 1</div>
@@ -29,8 +28,8 @@
         function addTodo(){
             const title = document.getElementById("title").value;
             const description = document.getElementById("description").value;
-            console.log(title);
-            console.log(description);
+            // console.log(title);
+            // console.log(description);
             const originalHTML = document.getElementById("container").innerHTML;
             document.getElementById("container").innerHTML = originalHTML + `<div>
                 <div>${title}</div>
