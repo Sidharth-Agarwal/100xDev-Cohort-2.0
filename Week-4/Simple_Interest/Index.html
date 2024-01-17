@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input oninput ="" id="principal" type="text" placeholder="Principal Amount"></input>
+    <br>
+    <br>
+    <input oninput ="" id="time" type="text" placeholder="Time in Years"></input>
+    <br>
+    <br>
+    <input oninput ="" id="interest" type="text" placeholder="Interest per Year"></input>
+    <br>
+    <br>
+    <button onclick="populateDiv()">Calculate Simple Interest</button>
+    <br>
+    <br>
+    <div id="finalAns"></div>
+
+    <script>
+        async function populateDiv(){
+            const a = document.getElementById("principal").value;
+            const b = document.getElementById("interest").value;
+            const c = document.getElementById("time").value;
+
+            // Fetch
+            const response = await fetch("http://localhost:3000/interest?principal=" + a + "&rate=" + b + "&time=" + c);
+            const ans = await response.text();
+            document.getElementById("finalAns").innerHTML = ans;
+        }
+    </script>
+</body>
+</html>
