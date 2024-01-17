@@ -1,3 +1,5 @@
+// This is the backend for both Simple_Sum and Simple_Interest
+
 const express = require("express");
 const cors = require("cors");
 const app = express();
