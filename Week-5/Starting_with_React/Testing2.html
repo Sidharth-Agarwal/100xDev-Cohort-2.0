@@ -22,6 +22,7 @@
 
         // 3. Updating the DOM element
         function buttonComponentReRender(){
+            // If we don't clear the DOM here then the button itself will be appended
             document.getElementById("buttonParent").innerHTML = "";
             const component = buttonComponent(state.count);
             document.getElementById("buttonParent").appendChild(component);
