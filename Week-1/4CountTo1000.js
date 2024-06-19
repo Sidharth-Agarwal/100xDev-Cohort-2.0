@@ -1,4 +1,4 @@
-// // WAP to count the sum till 1000
+// WAP to count the sum till 100
 
 let answer = 0;
 
