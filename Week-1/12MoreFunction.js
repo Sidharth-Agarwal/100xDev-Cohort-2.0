@@ -11,4 +11,5 @@ function displayResultPassive(data) {
     console.log("Sum's result is : " + data);
 }
 
+// Passing function as a parameter
 const ans = sum(2, 3, displayResult);
