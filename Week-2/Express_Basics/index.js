@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 
 app.post('/conversation', function (req, res) {
   // console.log(req.headers["authorization"])
-  console.log(req.body)
+  console.log(req.body.message)
   res.send({
     msg:"2+2=4"
   })
