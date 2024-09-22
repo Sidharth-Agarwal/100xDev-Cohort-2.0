@@ -11,10 +11,16 @@ function calculateSum(n) {
     return ans;
 }
 
-app.get('/', function (req, res) {
+// app.get('/', (req,res) => {
+//     const n = parseInt(req.query.n);
+//     const ans = calculateSum(n)
+//     res.send(ans.toString())
+// })
+
+app.get("/", function (req,res) {
     const n = req.query.n;
-    const ans = calculateSum(n);
-    res.send("The answer is " + ans);
+    const ans = calculateSum(n)
+    res.send("The answe is : " + ans);
 })
 
 app.listen(port, function () {
