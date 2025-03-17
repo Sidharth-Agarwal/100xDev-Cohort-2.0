@@ -12,5 +12,5 @@ function findSumTill100() {
     console.log(findSum(100));
 }
 
-setTimeout(findSumTill100, 1000);
+setTimeout(findSumTill100, 10000);
 console.log("Hellow World!!!");

@@ -12,4 +12,4 @@ function displayResultPassive(data) {
 }
 
 // Passing function as a parameter
-const ans = sum(2, 3, displayResult);
+const ans = sum(2, 3, displayResultPassive);

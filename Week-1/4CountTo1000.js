@@ -1,9 +1,9 @@
 // WAP to count the sum till 100
 
-let answer = 0;
+let ans = 0;
 
-for (let i = 0; i <= 1000; i++){
-    answer += i;
+for(let i=1;i<=100;i++) {
+    ans = ans + i;
 }
 
-console.log("The total sum is : " + answer);
+console.log("Answer :", ans);

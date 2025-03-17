@@ -13,8 +13,8 @@ const allUsers = [{
 }
 ]
 
-for (let i = 0; i < allUsers.length; i++){
-    if (allUsers[i]["firstName"]) {
-        console.log(allUsers[i]["firstName"]);
-    }
+for(let i=0;i<allUsers.length;i++){
+    // There are 2 ways to access the firstName key
+    console.log(allUsers[i]["firstName"]);
+    console.log(allUsers[i].firstName);
 }
